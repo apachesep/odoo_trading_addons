@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<!--
+
+#    Copyright Elico (C) 2014 LIN Yu(<lin.yu@elico-corp.com>).
+
+    科目类型
+我们借用这个对象生成资产负债表和损益表
+-->
+    <data noupdate="True">
+        <!-- 根科目，不显示在报表行上 -->
+        <record id="user_type_all" model="account.account.type">
+            <field name="name">不显示在报表上</field>
+            <field name="code">0</field>
+            <field name="close_method">none</field>
+            <field name="report_type">none</field>
+        </record>
+        <!-- 利润表科目 -->
+        <!-- 资产负债表科目 -->
+        <record id="user_type_bs1" model="account.account.type">
+            <field name="name">流動資產</field>
+            <field name="code">bs1</field>
+            <field name="close_method">unreconciled</field>
+            <field name="report_type">asset</field>
+        </record>
+        <record id="user_type_bs2" model="account.account.type">
+            <field name="name">基金及長期投資</field>
+            <field name="code">bs2</field>
+            <field name="close_method">balance</field>
+            <field name="report_type">asset</field>
+        </record>
+        <record id="user_type_bs3" model="account.account.type">
+            <field name="name">固定資產</field>
+            <field name="code">bs3</field>
+            <field name="close_method">balance</field>
+            <field name="report_type">asset</field>
+        </record>
+        <record id="user_type_bs4" model="account.account.type">
+            <field name="name">無形資產</field>
+            <field name="code">bs4</field>
+            <field name="close_method">balance</field>
+            <field name="report_type">asset</field>
+        </record>
+        <record id="user_type_bs5" model="account.account.type">
+            <field name="name">其它資產</field>
+            <field name="code">bs5</field>
+            <field name="close_method">balance</field>
+            <field name="report_type">asset</field>
+        </record>
+        <record id="user_type_bs6" model="account.account.type">
+            <field name="name">流動負債</field>
+            <field name="code">bs6</field>
+            <field name="close_method">unreconciled</field>
+            <field name="report_type">liability</field>
+        </record>
+        <record id="user_type_bs7" model="account.account.type">
+            <field name="name">長期負債</field>
+            <field name="code">bs7</field>
+            <field name="close_method">balance</field>
+            <field name="report_type">liability</field>
+        </record>
+        <record id="user_type_bs8" model="account.account.type">
+            <field name="name">其它負債</field>
+            <field name="code">bs8</field>
+            <field name="close_method">balance</field>
+            <field name="report_type">liability</field>
+        </record>
+        <record id="user_type_bs9" model="account.account.type">
+            <field name="name">股本</field>
+            <field name="code">bs9</field>
+            <field name="close_method">balance</field>
+            <field name="report_type">liability</field>
+        </record>
+        <record id="user_type_bs10" model="account.account.type">
+            <field name="name">資本公積</field>
+            <field name="code">bs10</field>
+            <field name="close_method">balance</field>
+            <field name="report_type">liability</field>
+        </record>
+        <record id="user_type_bs11" model="account.account.type">
+            <field name="name">保留盈餘</field>
+            <field name="code">bs11</field>
+            <field name="close_method">balance</field>
+            <field name="report_type">liability</field>
+        </record>
+
+        <!-- 利润表科目 -->
+        <record id="user_type_pl11" model="account.account.type">
+            <field name="name">營業收入</field>
+            <field name="code">pl11</field>
+            <field name="close_method">none</field>
+            <field name="report_type">income</field>
+        </record>
+        <record id="user_type_pl12" model="account.account.type">
+            <field name="name">勞務收入</field>
+            <field name="code">pl12</field>
+            <field name="close_method">none</field>
+            <field name="report_type">income</field>
+        </record>
+        <record id="user_type_pl13" model="account.account.type">
+            <field name="name">業務收入</field>
+            <field name="code">pl13</field>
+            <field name="close_method">none</field>
+            <field name="report_type">income</field>
+        </record>      
+        <record id="user_type_pl14" model="account.account.type">
+            <field name="name">其它營業收入</field>
+            <field name="code">pl14</field>
+            <field name="close_method">none</field>
+            <field name="report_type">income</field>
+        </record>
+        <record id="user_type_pl20" model="account.account.type">
+            <field name="name">營業成本</field>
+            <field name="code">pl20</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl21" model="account.account.type">
+            <field name="name">進貨</field>
+            <field name="code">pl21</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl22" model="account.account.type">
+            <field name="name">製造成本</field>
+            <field name="code">pl22</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl23" model="account.account.type">
+            <field name="name">人工成本</field>
+            <field name="code">pl23</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl24" model="account.account.type">
+            <field name="name"> 勞務成本</field>
+            <field name="code">pl24</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl25" model="account.account.type">
+            <field name="name">業務成本</field>
+            <field name="code">pl25</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl26" model="account.account.type">
+            <field name="name">其它營業成本</field>
+            <field name="code">pl26</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl29" model="account.account.type">
+            <field name="name">管理及總務費用</field>
+            <field name="code">pl29</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl30" model="account.account.type">
+            <field name="name">營業外收入</field>
+            <field name="code">pl30</field>
+            <field name="close_method">none</field>
+            <field name="report_type">income</field>
+        </record>
+        <record id="user_type_pl35" model="account.account.type">
+            <field name="name">營業外費用</field>
+            <field name="code">pl35</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+
+        <record id="user_type_pl40" model="account.account.type">
+            <field name="name">所得稅</field>
+            <field name="code">pl40</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl41" model="account.account.type">
+            <field name="name">停業單位損益</field>
+            <field name="code">pl41</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl42" model="account.account.type">
+            <field name="name">非常損益</field>
+            <field name="code">pl42</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl42" model="account.account.type">
+            <field name="name">非常損益</field>
+            <field name="code">pl42</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl42" model="account.account.type">
+            <field name="name">非常損益</field>
+            <field name="code">pl42</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl42" model="account.account.type">
+            <field name="name">非常損益</field>
+            <field name="code">pl42</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        
+        <record id="user_type_pl43" model="account.account.type">
+            <field name="name">會計原則變動累積影響</field>
+            <field name="code">pl43</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl44" model="account.account.type">
+            <field name="name">本期淨利(淨損)</field>
+            <field name="code">pl44</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl45" model="account.account.type">
+            <field name="name">基本每股盈餘</field>
+            <field name="code">pl45</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+        <record id="user_type_pl46" model="account.account.type">
+            <field name="name">稀釋每股盈餘</field>
+            <field name="code">pl46</field>
+            <field name="close_method">none</field>
+            <field name="report_type">expense</field>
+        </record>
+
+    </data>
+</openerp>

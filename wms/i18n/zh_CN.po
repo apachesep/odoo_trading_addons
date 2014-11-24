@@ -1,0 +1,304 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* wms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-14 02:04+0000\n"
+"PO-Revision-Date: 2014-11-14 02:04+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+"Author: LIN Yu @ Elico 2014 <lin.yu@elico-corp.com>\n"
+
+#. module: wms
+#: field:stock.location,categ_id:0
+msgid "Category"
+msgstr "Category"
+
+#. module: wms
+#: field:wms.report.stock.available,prodlot_id:0
+msgid "Production lot"
+msgstr "Production lot"
+
+#. module: wms
+#: help:wms.report.stock.available,usage:0
+msgid "* Supplier Location: Virtual location representing the source location for products coming from your suppliers\n"
+"                       \n"
+"* View: Virtual location used to create a hierarchical structures for your warehouse, aggregating its child locations ; can't directly contain products\n"
+"                       \n"
+"* Internal Location: Physical locations inside your own warehouses,\n"
+"                       \n"
+"* Customer Location: Virtual location representing the destination location for products sent to your customers\n"
+"                       \n"
+"* Inventory: Virtual location serving as counterpart for inventory operations used to correct stock levels (Physical inventories)\n"
+"                       \n"
+"* Procurement: Virtual location serving as temporary counterpart for procurement operations when the source (supplier or production) is not known yet. This location should be empty when the procurement scheduler has finished running.\n"
+"                       \n"
+"* Production: Virtual counterpart location for production operations: this location consumes the raw material and produces finished products\n"
+"                      "
+msgstr "* Supplier Location: Virtual location representing the source location for products coming from your suppliers\n"
+"                       \n"
+"* View: Virtual location used to create a hierarchical structures for your warehouse, aggregating its child locations ; can't directly contain products\n"
+"                       \n"
+"* Internal Location: Physical locations inside your own warehouses,\n"
+"                       \n"
+"* Customer Location: Virtual location representing the destination location for products sent to your customers\n"
+"                       \n"
+"* Inventory: Virtual location serving as counterpart for inventory operations used to correct stock levels (Physical inventories)\n"
+"                       \n"
+"* Procurement: Virtual location serving as temporary counterpart for procurement operations when the source (supplier or production) is not known yet. This location should be empty when the procurement scheduler has finished running.\n"
+"                       \n"
+"* Production: Virtual counterpart location for production operations: this location consumes the raw material and produces finished products\n"
+"                      "
+
+#. module: wms
+#: help:stock.location,warehouse_id:0
+msgid "Warehouse where is located this location"
+msgstr "Warehouse where is located this location"
+
+#. module: wms
+#: model:ir.model,name:wms.model_stock_location_category
+msgid "Category of stock location"
+msgstr "Category of stock location"
+
+#. module: wms
+#: model:ir.model,name:wms.model_wms_report_stock_available
+msgid "Stock available"
+msgstr "在手库存"
+
+#. module: wms
+#: field:stock.to.date.line,virtual_available:0
+msgid "Virtual"
+msgstr "虚拟"
+
+#. module: wms
+#: field:stock.to.date,uom_id:0
+msgid "Default UoM"
+msgstr "默认单位"
+
+#. module: wms
+#: view:wms.report.stock.available:0
+msgid "Group By..."
+msgstr "分组..."
+
+#. module: wms
+#: view:wms.report.stock.available:0
+msgid "Internal"
+msgstr "内部"
+
+#. module: wms
+#: model:ir.model,name:wms.model_stock_location
+#: view:wms.report.stock.available:0
+#: field:wms.report.stock.available,location_id:0
+msgid "Location"
+msgstr "库位"
+
+#. module: wms
+#: field:stock.to.date.line,stock_to_date_id:0
+msgid "Stock To Date"
+msgstr "即时库存"
+
+#. module: wms
+#: view:wms.report.stock.available:0
+msgid "Supplier"
+msgstr "供应商"
+
+#. module: wms
+#: view:wms.report.stock.available:0
+#: field:wms.report.stock.available,uom_id:0
+msgid "UOM"
+msgstr "单位"
+
+#. module: wms
+#: field:stock.to.date.line,outgoing_qty:0
+msgid "Outgoing"
+msgstr "出库"
+
+#. module: wms
+#: view:wms.report.stock.available:0
+msgid "Supplier Locations"
+msgstr "供应商库位"
+
+#. module: wms
+#: field:wms.report.stock.available,usage:0
+msgid "Usage"
+msgstr "使用"
+
+#. module: wms
+#: view:wms.report.stock.available:0
+msgid "Total"
+msgstr "合计"
+
+#. module: wms
+#: field:wms.report.stock.available,company_id:0
+msgid "unknown"
+msgstr "未知"
+
+#. module: wms
+#: help:stock.location.category,name:0
+msgid "Name of the category of stock location"
+msgstr "库位种类名字"
+
+#. module: wms
+#: field:wms.report.stock.available,product_qty:0
+msgid "Quantity"
+msgstr "数量"
+
+#. module: wms
+#: view:wms.report.stock.available:0
+msgid "Internal Locations"
+msgstr "内部库位"
+
+#. module: wms
+#: field:stock.to.date.line,date:0
+msgid "Date"
+msgstr "日期"
+
+#. module: wms
+#: view:wms.report.stock.available:0
+msgid "Extended Filters..."
+msgstr "高级过滤..."
+
+#. module: wms
+#: help:stock.location.category,active:0
+msgid "This field allows to hide the category without removing it"
+msgstr "本字段可以隐藏分类而不是删除分类"
+
+#. module: wms
+#: view:wms.report.stock.available:0
+msgid "Customer"
+msgstr "客户"
+
+#. module: wms
+#: field:stock.to.date.line,incoming_qty:0
+msgid "Incoming"
+msgstr "入库"
+
+#. module: wms
+#: field:stock.location.category,name:0
+msgid "Name"
+msgstr "名字"
+
+#. module: wms
+#: help:stock.to.date,date_to:0
+msgid "Date end to compute stock"
+msgstr "计算截止日期"
+
+#. module: wms
+#: model:ir.model,name:wms.model_stock_to_date
+msgid "Stock to date by product"
+msgstr "产品即时库存"
+
+#. module: wms
+#: field:stock.to.date,product_id:0
+#: view:wms.report.stock.available:0
+#: field:wms.report.stock.available,product_id:0
+msgid "Product"
+msgstr "产品"
+
+#. module: wms
+#: view:wms.report.stock.available:0
+msgid "Customer Locations"
+msgstr "客户库位"
+
+#. module: wms
+#: field:stock.to.date,orderpoint_ids:0
+msgid "OrderPoint"
+msgstr "订购点"
+
+#. module: wms
+#: field:stock.location.category,active:0
+msgid "Active"
+msgstr "有效"
+
+#. module: wms
+#: help:stock.to.date.line,color:0
+msgid "Just for show color in today"
+msgstr "只显示今日颜色"
+
+#. module: wms
+#: help:stock.location.category,code:0
+msgid "Code of the category of stock location"
+msgstr "库位分类代码"
+
+#. module: wms
+#: field:stock.to.date,date_from:0
+msgid "Date start"
+msgstr "起始日期"
+
+#. module: wms
+#: code:addons/wms/wizard/stock_to_date.py:59
+#, python-format
+msgid "Warning !"
+msgstr "警告 !"
+
+#. module: wms
+#: help:stock.location,categ_id:0
+msgid "Category of this location"
+msgstr "库位分类"
+
+#. module: wms
+#: code:addons/wms/wizard/stock_to_date.py:59
+#, python-format
+msgid "Please contact your administrator to configure warehouse in your profile."
+msgstr "请联系管理员设置你的默认仓库."
+
+#. module: wms
+#: field:stock.location.category,code:0
+msgid "Code"
+msgstr "代码"
+
+#. module: wms
+#: field:stock.to.date.line,color:0
+msgid "Color"
+msgstr "颜色"
+
+#. module: wms
+#: field:stock.location,warehouse_id:0
+#: field:stock.to.date,warehouse_id:0
+#: view:wms.report.stock.available:0
+#: field:wms.report.stock.available,warehouse_id:0
+msgid "Warehouse"
+msgstr "仓库"
+
+#. module: wms
+#: model:ir.actions.act_window,name:wms.act_open_report_stock_location_available_view
+#: model:ir.ui.menu,name:wms.menu_report_stock_location_available
+#: model:ir.ui.menu,name:wms.menu_report_stock_location_available_1
+#: model:ir.ui.menu,name:wms.menu_report_stock_location_available_2
+#: field:stock.to.date,report_stock_ids:0
+#: view:wms.report.stock.available:0
+msgid "Stock Available"
+msgstr "在手库存"
+
+#. module: wms
+#: help:stock.to.date,date_from:0
+msgid "Date start to compute stock"
+msgstr "计算起始时间"
+
+#. module: wms
+#: field:stock.to.date,stock_to_date_line_ids:0
+msgid "Line of stock to date"
+msgstr "即时库存明细"
+
+#. module: wms
+#: model:ir.model,name:wms.model_stock_to_date_line
+msgid "Lines of stock to date"
+msgstr "即时库存明细"
+
+#. module: wms
+#: field:stock.to.date,date_to:0
+msgid "Date End"
+msgstr "截止时间"
+
+#. module: wms
+#: view:wms.report.stock.available:0
+msgid "Production Lot"
+msgstr "生产批号"
+
