@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="res_partner_portal_search" model="ir.ui.view">
+            <field name="name">res.partner.portal.search</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <filter name="supplier" position="after">
+                    <filter string="Portal" name="portal" domain="[('portal','=',1)]" help="Portal Partners"/>
+                </filter>
+            </field>
+		</record>
+
+    </data>
+</openerp>
